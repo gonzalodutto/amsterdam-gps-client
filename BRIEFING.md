@@ -121,7 +121,7 @@ A wireframe of the app will be provided to you along with this assessment. To ge
 | A navbar can be used to navigate between the static pages | 1      | ok  |
 | 2 Buttons link to the correct pages                       | 1      | ok  |
 | The navbar indicates what page you are on                 | 1      |
-| Total                                                     | 5      |
+| Total                                                     | 5      | 4   |
 
 Hint: to indicate what page a user is on use the `<NavLink />` component
 
@@ -137,12 +137,12 @@ https://github.com/ReactTraining/react-router/blob/master/packages/react-router-
 Business logic: the practice is open between 08:00 and 16:59
 
 | Criteria                                                               | Points |
-| ---------------------------------------------------------------------- | ------ |
-| Phone number is displayed on both pages                                | 0.5    |
-| Wether the practice is open right now is displayed on both pages       | 0.5    |
-| Wether the practice is open or closed is dynamic, not hardcoded        | 2      |
-| To display this information the same component is reused on both pages | 1      |
-| Total                                                                  | 4      |
+| ---------------------------------------------------------------------- | ------ | --- |
+| Phone number is displayed on both pages                                | 0.5    | ok  |
+| Wether the practice is open right now is displayed on both pages       | 0.5    | ok  |
+| Wether the practice is open or closed is dynamic, not hardcoded        | 2      | ok  |
+| To display this information the same component is reused on both pages | 1      | ok  |
+| Total                                                                  | 4      | 4   |
 
 Hint: You will have to google how to get the current hour of the day using javascript to be able to display **open** or **closed** dynamically.
 
@@ -209,20 +209,20 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors
 | Dr. Tollady  | 3             |
 
 | Criteria                                                                  | Points |
-| ------------------------------------------------------------------------- | ------ |
-| The `name`, `id` & `dateOfBirth` is displayed for all patients            | 1      |
-| The data for each patient is displayed using a separate component         | 2      |
-| The data is displayed using .map                                          | 1      |
+| ------------------------------------------------------------------------- | ------ | --- |
+| The `name`, `id` & `dateOfBirth` is displayed for all patients            | 1      | ok  |
+| The data for each patient is displayed using a separate component         | 2      | ok  |
+| The data is displayed using .map                                          | 1      | ok  |
 | There is a warning in the console regarding "key" props                   | -1     |
 | The patients are sorted by their `lastName` using .sort                   | 2      |
-| The data for the patients is fetched from the api, not hardcoded          | 1      |
-| Each patient displayed has a `show details` button                        | 0.5    |
-| The show details button links to the detail page for that patient         | 1.5    |
+| The data for the patients is fetched from the api, not hardcoded          | 1      | ok  |
+| Each patient displayed has a `show details` button                        | 0.5    | ok  |
+| The show details button links to the detail page for that patient         | 1.5    | ok  |
 | The page has a `select` input for the 3 doctors names and `all`           | 1      |
 | When `all` is selected, all patients are displayed                        | 1      |
 | Selecting the name of a doctor filters the patients that are displayed    | 3      |
 | The names of the doctors in the `select` input are fetched, not hardcoded | 2      |
-| Total                                                                     | 16     |
+| Total                                                                     | 16     | 8   |
 
 ### 6. As a doctor I want to be able to view the details of my patients, so I can make good decisions
 
@@ -233,13 +233,13 @@ GET /patients/:patientId
 https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/patients/5856675843
 
 | Criteria                                                                      | Points |
-| ----------------------------------------------------------------------------- | ------ |
-| 1 Dynamic route is implemented using React Router for the patient detail page | 1      |
-| The page displays the firstname, lastname, gender, dateOfBirth of a patient   | 0.5    |
-| The page displays the email, phoneNumber & prescriptions of a patient         | 0.5    |
-| The data on the page is fetched from the api, not hardcoded                   | 2      |
+| ----------------------------------------------------------------------------- | ------ | --- |
+| 1 Dynamic route is implemented using React Router for the patient detail page | 1      | ok  |
+| The page displays the firstname, lastname, gender, dateOfBirth of a patient   | 0.5    | ok  |
+| The page displays the email, phoneNumber & prescriptions of a patient         | 0.5    | ok  |
+| The data on the page is fetched from the api, not hardcoded                   | 2      | ok  |
 | The data of all the patients is fetched from the api on this page             | -1     |
-| Total                                                                         | 5      |
+| Total                                                                         | 5      | 4   |
 
 ### 7. Express server
 
@@ -252,25 +252,25 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/patients/5856
 https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/db
 
 | Criteria                                                                                       | Points |
-| ---------------------------------------------------------------------------------------------- | ------ |
-| There is a file called server.js & a package.json, in your server repository                   | 0.5    |
-| package.json contains a script called `server`, which runs the server.js file with node        | 0.5    |
-| package.json contains a script called `server-dev`, which runs the server.js file with nodemon | 0.5    |
-| running server.js starts an express server which listens on port 4000                          | 1      |
-| Requests to http://localhost:4000/patients get a response of an array with 10 patients         | 1      |
-| Requests to http://localhost:4000/doctors get a response of an array of 3 doctors              | 1      |
-| Requests to http://localhost:4000/patients/:id get a response of 1 patient object with that id | 2.5    |
-| Total                                                                                          | 7      |
+| ---------------------------------------------------------------------------------------------- | ------ | --- |
+| There is a file called server.js & a package.json, in your server repository                   | 0.5    | ok  |
+| package.json contains a script called `server`, which runs the server.js file with node        | 0.5    | ok  |
+| package.json contains a script called `server-dev`, which runs the server.js file with nodemon | 0.5    | ok  |
+| running server.js starts an express server which listens on port 4000                          | 1      | ok  |
+| Requests to http://localhost:4000/patients get a response of an array with 10 patients         | 1      | ok  |
+| Requests to http://localhost:4000/doctors get a response of an array of 3 doctors              | 1      | ok  |
+| Requests to http://localhost:4000/patients/:id get a response of 1 patient object with that id | 2.5    | ok  |
+| Total                                                                                          | 7      | 7   |
 
 ### 8. Styling
 
 - Apply some styling to this app using CSS to make it look better
 
 | Criteria                                                               | Points |
-| ---------------------------------------------------------------------- | ------ |
-| Student has applied at least 5 style rules                             | 1      |
-| Styles are split up across at least 2 css files created by the student | 1      |
-| Total                                                                  | 2      |
+| ---------------------------------------------------------------------- | ------ | --- |
+| Student has applied at least 5 style rules                             | 1      | ok  |
+| Styles are split up across at least 2 css files created by the student | 1      | ok  |
+| Total                                                                  | 2      | 2   |
 
 ### 9. Finishing up
 

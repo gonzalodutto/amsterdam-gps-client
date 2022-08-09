@@ -6,6 +6,7 @@ import {
   DoctorSchedule,
   PatientDatabase,
   PatientSignUp,
+  DetailsPage,
 } from "./pages";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/doctor_schedule" element={<DoctorSchedule />} />
         <Route path="/patients" element={<PatientDatabase />} />
         <Route path="/patient_signup" element={<PatientSignUp />} />
+        <Route path="/patients/:id" element={<DetailsPage />} />
       </Routes>
     </div>
   );

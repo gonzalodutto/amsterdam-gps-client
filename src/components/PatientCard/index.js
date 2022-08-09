@@ -14,7 +14,7 @@ const PatientCard = (props) => {
         </div>
         <div>
           <button className="MoreInformationButton">
-            <NavLink className="product-title" to={`/details/${props.id}`}>
+            <NavLink className="product-title" to={`/patients/${props.id}`}>
               Show details
             </NavLink>
           </button>
