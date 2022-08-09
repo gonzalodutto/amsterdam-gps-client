@@ -12,7 +12,7 @@ const NavBar = (props) => {
           {" | "}
           <NavLink to="/patient_signup">Patient SignUp</NavLink>
           {" | "}
-          <NavLink to="/patient_database">Patient Database</NavLink>
+          <NavLink to="/patients">Patient Database</NavLink>
         </div>
       </div>
     </div>

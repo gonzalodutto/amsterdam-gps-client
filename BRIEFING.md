@@ -115,11 +115,11 @@ A wireframe of the app will be provided to you along with this assessment. To ge
   - I am a new patient: should link to the patient sign up page
 
 | Criteria                                                  | Points |
-| --------------------------------------------------------- | ------ |
-| 4 Static Routes are implemented using react router        | 1      |
-| Each route renders a different component                  | 1      |
-| A navbar can be used to navigate between the static pages | 1      |
-| 2 Buttons link to the correct pages                       | 1      |
+| --------------------------------------------------------- | ------ | --- |
+| 4 Static Routes are implemented using react router        | 1      | ok  |
+| Each route renders a different component                  | 1      | ok  |
+| A navbar can be used to navigate between the static pages | 1      | ok  |
+| 2 Buttons link to the correct pages                       | 1      | ok  |
 | The navbar indicates what page you are on                 | 1      |
 | Total                                                     | 5      |
 
