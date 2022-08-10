@@ -1,0 +1,8 @@
+.Form {
+    display: flex;
+    flex-direction: column;
+}
+
+.InputSignUp{
+    margin: 5px;
+}

@@ -30,19 +30,17 @@ const DoctorSchedule = () => {
             <tbody>
               <tr>
                 <td>Doctor</td>
-                <td>availability</td>
+                <td>Availability</td>
               </tr>
-              <tr>
-                {doctorList
-                  ? doctorList.map((doctor, i) => (
-                      <DoctorScheduleRow
-                        key={i}
-                        name={doctor.name}
-                        onDuty={doctor.onDuty}
-                      />
-                    ))
-                  : ""}
-              </tr>
+              {doctorList
+                ? doctorList.map((doctor, i) => (
+                    <DoctorScheduleRow
+                      key={i}
+                      name={doctor.name}
+                      onDuty={doctor.onDuty}
+                    />
+                  ))
+                : ""}
             </tbody>
           </table>
         </div>

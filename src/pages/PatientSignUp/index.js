@@ -1,5 +1,13 @@
+import { SignUpForm } from "../../components";
+
 const PatientSignUp = () => {
-  return <div>Hola desde Patient SignUp</div>;
+  return (
+    <div>
+      <div>
+        <SignUpForm />
+      </div>
+    </div>
+  );
 };
 
 export { PatientSignUp };
