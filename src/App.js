@@ -7,6 +7,7 @@ import {
   PatientDatabase,
   PatientSignUp,
   DetailsPage,
+  PatientSignUpSuccess,
 } from "./pages";
 
 function App() {
@@ -19,6 +20,10 @@ function App() {
         <Route path="/patients" element={<PatientDatabase />} />
         <Route path="/patient_signup" element={<PatientSignUp />} />
         <Route path="/patients/:id" element={<DetailsPage />} />
+        <Route
+          path="/patients/signup/success"
+          element={<PatientSignUpSuccess />}
+        />
       </Routes>
     </div>
   );

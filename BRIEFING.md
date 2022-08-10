@@ -157,14 +157,14 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors
 - On our who is on duty page, we display up to date information about which doctor is on duty.
 
 | Criteria                                                          | Points |
-| ----------------------------------------------------------------- | ------ |
-| Doctor availabilty is displayed on the who is on duty page        | 1      |
-| The data is fetched from the api, not hardcoded                   | 2      |
-| If the data is still being fetched, display "loading" to the user | 2      |
-| The data is displayed using .map                                  | 1      |
-| There is a warning in the console regarding "key" props           | -1     |
-| Doctor availability is displayed using an html `table` element    | 1      |
-| Total                                                             | 7      |
+| ----------------------------------------------------------------- | ------ | --- |
+| Doctor availabilty is displayed on the who is on duty page        | 1      | ok  |
+| The data is fetched from the api, not hardcoded                   | 2      | ok  |
+| If the data is still being fetched, display "loading" to the user | 2      | ok  |
+| The data is displayed using .map                                  | 1      | ok  |
+| There is a warning in the console regarding "key" props           | -1     | -   |
+| Doctor availability is displayed using an html `table` element    | 1      | ok  |
+| Total                                                             | 7      | 7   |
 
 ### 4. As a new patient I want to be able to sign up
 
@@ -173,16 +173,16 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors
 - We will not actually store the data, console.logging the data from the form to console is good enough for now
 
 | Criteria                                                                         | Points |
-| -------------------------------------------------------------------------------- | ------ |
-| A form is displayed on the Patient Signup page                                   | 1      |
-| The form has inputs for firstName, lastName, email, phoneNumber & submit         | 0.5    |
-| The form has a select input for gender, and a date input for dateOfBirth         | 0.5    |
-| The state of the form is controlled using React useState hook(s)                 | 2      |
-| When the form is submitted, the user input for all form fields is console.logged | 2      |
-| When the form has been submitted, we show a success message to the user          | 2      |
-| The success message is an alert, prompt or confirm popup                         | -1     |
-| Submitting the form refreshes the page                                           | -2     |
-| Total                                                                            | 8      |
+| -------------------------------------------------------------------------------- | ------ | --- |
+| A form is displayed on the Patient Signup page                                   | 1      | ok  |
+| The form has inputs for firstName, lastName, email, phoneNumber & submit         | 0.5    | ok  |
+| The form has a select input for gender, and a date input for dateOfBirth         | 0.5    | ok  |
+| The state of the form is controlled using React useState hook(s)                 | 2      | ok  |
+| When the form is submitted, the user input for all form fields is console.logged | 2      | ok  |
+| When the form has been submitted, we show a success message to the user          | 2      | ok  |
+| The success message is an alert, prompt or confirm popup                         | -1     | -   |
+| Submitting the form refreshes the page                                           | -2     | -   |
+| Total                                                                            | 8      | 8   |
 
 ### 5. As a doctor I want to be able to view which patients I have, so I can see who I am responsible for
 
@@ -213,16 +213,16 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors
 | The `name`, `id` & `dateOfBirth` is displayed for all patients            | 1      | ok  |
 | The data for each patient is displayed using a separate component         | 2      | ok  |
 | The data is displayed using .map                                          | 1      | ok  |
-| There is a warning in the console regarding "key" props                   | -1     |
-| The patients are sorted by their `lastName` using .sort                   | 2      |
+| There is a warning in the console regarding "key" props                   | -1     | -   |
+| The patients are sorted by their `lastName` using .sort                   | 2      | ok  |
 | The data for the patients is fetched from the api, not hardcoded          | 1      | ok  |
 | Each patient displayed has a `show details` button                        | 0.5    | ok  |
 | The show details button links to the detail page for that patient         | 1.5    | ok  |
-| The page has a `select` input for the 3 doctors names and `all`           | 1      |
+| The page has a `select` input for the 3 doctors names and `all`           | 1      | ok  |
 | When `all` is selected, all patients are displayed                        | 1      |
-| Selecting the name of a doctor filters the patients that are displayed    | 3      |
-| The names of the doctors in the `select` input are fetched, not hardcoded | 2      |
-| Total                                                                     | 16     | 8   |
+| Selecting the name of a doctor filters the patients that are displayed    | 3      | ok  |
+| The names of the doctors in the `select` input are fetched, not hardcoded | 2      | ok  |
+| Total                                                                     | 16     | 15  |
 
 ### 6. As a doctor I want to be able to view the details of my patients, so I can make good decisions
 
@@ -238,8 +238,8 @@ https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/patients/5856
 | The page displays the firstname, lastname, gender, dateOfBirth of a patient   | 0.5    | ok  |
 | The page displays the email, phoneNumber & prescriptions of a patient         | 0.5    | ok  |
 | The data on the page is fetched from the api, not hardcoded                   | 2      | ok  |
-| The data of all the patients is fetched from the api on this page             | -1     |
-| Total                                                                         | 5      | 4   |
+| The data of all the patients is fetched from the api on this page             | -1     | -   |
+| Total                                                                         | 5      | 5   |
 
 ### 7. Express server
 

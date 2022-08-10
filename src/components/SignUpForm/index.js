@@ -27,8 +27,8 @@ const SignUpForm = () => {
           phoneNumber: phoneNumber,
         }
       );
-      console.log(response.data.name);
-      navigate("/");
+      console.log(response.data.firstName);
+      navigate("/patients/signup/success");
     } catch (e) {
       console.log(e.message);
     }
@@ -60,26 +60,31 @@ const SignUpForm = () => {
           }}
           required
         />
-        <input
+        <select
           className="InputSignUp"
           type="text"
-          value={gender}
-          placeholder="Famela or Male?"
           onChange={(event) => {
             setGender(event.target.value);
           }}
           required
-        />
+        >
+          <option value="">Choose your gender</option>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+        </select>
         <input
           className="InputSignUp"
-          type="text"
+          type="date"
+          id="start"
+          name="trip-start"
           value={dateOfBirth}
-          placeholder="Date of Birth. Ex: 26/01/1985"
+          min="1900/01/01"
+          max="2025/12/31"
           onChange={(event) => {
             setDateOfBirth(event.target.value);
           }}
           required
-        />
+        ></input>
         <input
           className="InputSignUp"
           type="text"

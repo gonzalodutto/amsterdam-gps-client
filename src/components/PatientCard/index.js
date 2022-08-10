@@ -7,7 +7,7 @@ const PatientCard = (props) => {
       <div className="card-text-section">
         <div className="patientInformation">
           <div>
-            Name: {props.firstName} {props.lastName}{" "}
+            Name: {props.lastName}, {props.firstName}
           </div>
           <div>Id: {props.id}</div>
           <div>Date: {props.dateOfBirth}</div>

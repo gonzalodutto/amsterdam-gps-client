@@ -2,6 +2,7 @@ import { PresentationCard } from "../../components";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { DoctorScheduleRow } from "../../components";
+import "./styles.css";
 
 const DoctorSchedule = () => {
   const [doctorList, setDoctorList] = useState(null);
@@ -28,7 +29,7 @@ const DoctorSchedule = () => {
         <div>
           <table>
             <tbody>
-              <tr>
+              <tr className="TitleRow">
                 <td>Doctor</td>
                 <td>Availability</td>
               </tr>

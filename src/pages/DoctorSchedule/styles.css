@@ -1,0 +1,14 @@
+table,
+th,
+td {
+    border: 1px solid;
+}
+
+table {
+    width: 250px;
+}
+
+.TitleRow {
+    font-weight: bold;
+    background-color: rgb(219, 219, 219);
+}

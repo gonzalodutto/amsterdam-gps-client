@@ -4,38 +4,56 @@ import { PatientCard } from "../../components";
 
 const PatientDatabase = () => {
   const [patientList, setPatientList] = useState(null);
+  const [doctorList, setDoctorList] = useState(null);
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     try {
-      const getpatients = async () => {
+      const fetchData = async () => {
         const patientResponse = await axios.get(
           "http://localhost:4000/patients"
         );
         setPatientList(patientResponse.data);
+
+        const doctorResponse = await axios.get("http://localhost:4000/doctors");
+        setDoctorList(doctorResponse.data);
       };
 
-      getpatients();
+      fetchData();
     } catch (e) {
       console.log(e.message);
     }
   }, []);
 
+  console.log(`Doctor ID selected: ${filter}`);
+
   return (
     <div className="PatientDatabasePage">
-      <div>Hola desde Patient Database</div>
+      <div>Choose Doctor:</div>
+      <select
+        className="InputSignUp"
+        type="text"
+        onChange={(event) => {
+          setFilter(event.target.value);
+        }}
+        required
+      >
+        <option value="">All Doctors</option>
+        {doctorList
+          ? doctorList
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((doctor, i) => (
+                <option key={i} value={doctor.id}>
+                  {doctor.name}
+                </option>
+              ))
+          : "loading..."}
+      </select>
       <div>
         {patientList
           ? patientList
-              // .filter(
-              //   (patientObj) =>
-              //     categoryFilterList.length === 0 ||
-              //     categoryFilterList.includes(patientObj.categoryId)
-              // )
-              // .filter(
-              //   (patientObj) =>
-              //     ratingFilterList.length === 0 ||
-              //     ratingFilterList.includes(Math.round(patientObj.rating))
-              // )
+              // .filter((patientObj) => patientObj.doctorId === parseInt(filter))
+              .sort((a, b) => a.lastName.localeCompare(b.lastName))
               .map((patient, i) => (
                 <PatientCard
                   key={i}
@@ -45,7 +63,7 @@ const PatientDatabase = () => {
                   dateOfBirth={patient.dateOfBirth}
                 />
               ))
-          : ""}
+          : "loading..."}
       </div>
     </div>
   );
