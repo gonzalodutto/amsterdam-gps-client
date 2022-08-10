@@ -1,28 +1,49 @@
 import { PresentationCard } from "../../components";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { DoctorScheduleRow } from "../../components";
 
 const DoctorSchedule = () => {
+  const [doctorList, setDoctorList] = useState(null);
+
+  useEffect(() => {
+    try {
+      const getDocotors = async () => {
+        const doctorsResponse = await axios.get(
+          "http://localhost:4000/doctors"
+        );
+        setDoctorList(doctorsResponse.data);
+      };
+
+      getDocotors();
+    } catch (e) {
+      console.log(e.message);
+    }
+  }, []);
+
   return (
     <div>
       <div>
         <h1>Who is on duty?</h1>
         <div>
           <table>
-            <tr>
-              <td>Doctor</td>
-              <td>availability</td>
-            </tr>
-            <tr>
-              <td>16</td>
-              <td>14</td>
-            </tr>
-            <tr>
-              <td>16</td>
-              <td>14</td>
-            </tr>
-            <tr>
-              <td>16</td>
-              <td>14</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>Doctor</td>
+                <td>availability</td>
+              </tr>
+              <tr>
+                {doctorList
+                  ? doctorList.map((doctor, i) => (
+                      <DoctorScheduleRow
+                        key={i}
+                        name={doctor.name}
+                        onDuty={doctor.onDuty}
+                      />
+                    ))
+                  : ""}
+              </tr>
+            </tbody>
           </table>
         </div>
 

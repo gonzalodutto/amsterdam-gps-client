@@ -1,4 +1,5 @@
 import { PresentationCard } from "../../components";
+import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -9,8 +10,16 @@ const HomePage = () => {
           <PresentationCard />{" "}
         </div>
         <div className="buttonArea">
-          <button className="button">How is on duty?</button>
-          <button className="button">I'm a new patient</button>
+          <button className="button">
+            <NavLink className="product-title" to={"/doctor_schedule"}>
+              How is on duty?
+            </NavLink>
+          </button>
+          <button className="button">
+            <NavLink className="product-title" to={"/patient_signup"}>
+              I'm a new patient
+            </NavLink>
+          </button>
         </div>
       </div>
     </div>
