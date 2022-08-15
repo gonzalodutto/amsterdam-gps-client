@@ -52,7 +52,11 @@ const PatientDatabase = () => {
       <div>
         {patientList
           ? patientList
-              // .filter((patientObj) => patientObj.doctorId === parseInt(filter))
+              .filter((patientObj) =>
+                filter === ""
+                  ? patientObj
+                  : patientObj.doctorId === parseInt(filter)
+              )
               .sort((a, b) => a.lastName.localeCompare(b.lastName))
               .map((patient, i) => (
                 <PatientCard

@@ -6,13 +6,41 @@ const NavBar = (props) => {
     <div className="NavContainer">
       <div className="NavLinksAndInput">
         <div className="NavLinks">
-          <NavLink to="/">Home</NavLink>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { fontWeight: "bold" } : undefined
+            }
+            to="/"
+          >
+            Home
+          </NavLink>
           {" | "}
-          <NavLink to="/doctor_schedule">Doctor Schedule</NavLink>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { fontWeight: "bold" } : undefined
+            }
+            to="/doctor_schedule"
+          >
+            Doctor Schedule
+          </NavLink>
           {" | "}
-          <NavLink to="/patient_signup">Patient SignUp</NavLink>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { fontWeight: "bold" } : undefined
+            }
+            to="/patient_signup"
+          >
+            Patient SignUp
+          </NavLink>
           {" | "}
-          <NavLink to="/patients">Patient Database</NavLink>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { fontWeight: "bold" } : undefined
+            }
+            to="/patients"
+          >
+            Patient Database
+          </NavLink>
         </div>
       </div>
     </div>
